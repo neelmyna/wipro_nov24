@@ -96,4 +96,21 @@ $ git push origin main
 Bewlow command updates the changes in the remote repo to the local repo.
 $ git pull origin main
 ---------------------------------------------------
-One we have created Repo and the PAT, now we shall clone our repo:
+Once we have created Repo and the PAT, now we shall clone our repo:
+
+Copy the repo URL
+Add the PAT with explained template
+Run the command:
+
+$ git close repo_url_with_pat
+
+Run the 2 config commands
+
+Now, save the c_notex.txt inside repo folder
+Now run the 3 commands to see the changes in remote repo
+
+git add .
+git commit -m "message"
+git push origin main
+
+use git status to keep watching the changes after every command.
