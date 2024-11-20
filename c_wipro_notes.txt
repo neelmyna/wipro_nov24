@@ -1,0 +1,99 @@
+CREATE A NEW FOLDER LEARNING: 
+learning > wipro_c_training
+
+Create folder "software" in C drive
+Inside C:\software create new folders:
+	"mingw"
+	"notepad_pp"
+	"vs_code"
+	"git"
+
+Download these msi files (installer files)
+Go to Browser and:
+
+Download mingw:
+Google: "Download mingw"
+From the link: https://sourceforge.net/projects/mingw/
+Click the Green button to download
+
+Download git:
+Google: "Download git"
+From the link: https://git-scm.com/downloads
+Click the Green button to download
+
+Download vs_code:
+Google: "Download vs code"
+From the link: https://code.visualstudio.com/download
+Select and Click on the OS you have on your system
+
+Download notepad++:
+Google: "Download notepad++"
+From the link: https://notepad-plus-plus.org/downloads/
+Click on the version 8.6.7
+
+Now, go to the downloads folder and cut and paste all the installer files (.msi files) and paste them in their respective folders in C:\software
+
+Now, Double click on every installer file and install them.
+
+Steps to download mingw:
+1. Double click installer file
+2. Click Install
+3. Click Continue
+4. Select the 2nd check box mingw-base-32 (mark for installation)
+5. Select the 5th check box mingw-gcc-g++ (mark for installation)
+6. On Left top corner, click Installation then click, apply changes
+7. Now click Apply
+8. Close all windows.
+9. Go to C:\mingw\bin (copy this path and add it to environment variables)
+
+Add to Environment varibales:
+1. Windows search: ENV
+2. Click Edit system environment variables
+3. On top, double click path
+4. Now click new
+5. Paste the path
+6. click ok ok ok
+-------------------------------------------------
+GIT NOTES:
+
+Create GIT account
+Create new repo 
+Create personal access token(PAT)
+Install git
+ 
+use the below command to check if git is available/installed
+git --version
+ 
+the below is the repo URL (domain-name/username/repo-name)
+https://github.com/VidyeshSorte/wipro_c_nov24
+ 
+To download any local repo, use below command
+git clone https://github.com/VidyeshSorte/wipro_c_nov24
+
+To make the configurations while syncing remote repo with local repo use the below two commands(one time activity)
+
+$ git config --global user.name "VidyeshSorte"
+ 
+$ git config --global user.email "vidyeshsorte@gmail.com"
+
+
+Template command to sync remote repo with local repo
+git clone https://PAT@github.com/VidyeshSorte/wipro_c_nov24
+ 
+
+To check the current status use below command
+git status
+ 
+To stage the changes (To mark all the files to be updated) from the pwd use the below command. The dot in the command represents current folder (pwd). This command marks all the files that need to be updated in the remote repo.
+$ git add .
+ 
+Below command creates the object that need to be moved from the local machine to the cloud(server)
+$ git commit -m "relevant message"
+ 
+Below command moves the object from the local machine to the git server. However the changes in the remote repo will be first updated to the local repo by running the command: git pull origin main
+$ git push origin main
+ 
+Bewlow command updates the changes in the remote repo to the local repo.
+$ git pull origin main
+---------------------------------------------------
+One we have created Repo and the PAT, now we shall clone our repo:
