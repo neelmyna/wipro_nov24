@@ -1,18 +1,18 @@
 #include <stdio.h>
-// program to understand bitwise operators
+// Program to do understand updation operators.
 
 int main()
 {
-    int num1 = 23, num2 = 12, result = 0;
-
-    result = num1 & num2;
-    printf("X & Y = %d \n", result);
-    result = num1 | num2;
-    printf("X | Y = %d \n", result);
-    result = num1 ^ num2;
-    printf("X ^ Y = %d \n", result);
-    result = num1 >> 3; // num1 is immutable (copy of num1 is modified)
-    printf("X >> 3 = %d \n", result);
-    result = num2 << 2; // num2 is immutable (copy of num2 is modified)
-    printf("Y << 2 = %d \n", result);
+    int x = 10, y = 3, z = -1;
+    x++;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 3 -1
+    ++x;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 3 -1
+    y = z--;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 -1 -2
+    z = --x;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 -1 11
+    x = y++ + ++y;
+    //  -1  + 1
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 0  1  11
 }

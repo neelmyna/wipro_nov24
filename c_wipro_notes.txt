@@ -435,4 +435,226 @@ Y << 2
 0 0 0 0 1 1 0 0  Y =  8
 0 0 0 1 1 0 0 0  Y = 16
 0 0 1 1 0 0 0 0  Y = 32
+------------------------------------------------------------
+p1
+#include <stdio.h>
 
+int main()
+{
+    char ch;
+    int num;
+    float fnum;
+    double dnum;
+    short int snum;
+    long int lnum;
+    long long int llnum;
+    printf("Size of char (ch) = %d \n", sizeof(char));                      // sizeof(ch)
+    printf("Size of int (num) = %d \n", sizeof(num));                       // sizeof(ch)
+    printf("Size of float (fnum) = %d \n", sizeof(float));                  // sizeof(ch)
+    printf("Size of double (dnum) = %d \n", sizeof(double));                // sizeof(ch)
+    printf("Size of short int (snum) = %d \n", sizeof(snum));               // sizeof(ch)
+    printf("Size of long int (lnum) = %d \n", sizeof(lnum));                // sizeof(ch)
+    printf("Size of long long int (llnum) = %d \n", sizeof(long long int)); // sizeof(ch)
+}
+------------------------------------------------------------
+p2
+#include <stdio.h>
+// program to understand bitwise operators
+
+int main()
+{
+    int num1 = 23, num2 = 12, result = 0;
+
+    result = num1 & num2;
+    printf("X & Y = %d \n", result);
+    result = num1 | num2;
+    printf("X | Y = %d \n", result);
+    result = num1 ^ num2;
+    printf("X ^ Y = %d \n", result);
+    result = num1 >> 3; // num1 is immutable (copy of num1 is modified)
+    printf("X >> 3 = %d \n", result);
+    result = num2 << 2; // num2 is immutable (copy of num2 is modified)
+    printf("Y << 2 = %d \n", result);
+}
+------------------------------------------------------------
+p3
+#include <stdio.h>
+// Program to check if a number is Even
+
+int main()
+{
+    int inputNum = 0;
+    puts("Enter a number to check if it is Even");
+    scanf("%d", &inputNum);
+    if (inputNum % 2 == 0)
+        printf("%d is Even number", inputNum);
+}
+------------------------------------------------------------
+p4
+#include <stdio.h>
+// Program to check if a number is Even or not.
+
+int main()
+{
+    int inputNum = 0;
+    puts("Enter a number to check if it is Even");
+    scanf("%d", &inputNum);
+    if (inputNum % 2 == 0)
+        printf("%d is Even number", inputNum);
+    else
+        printf("%d is not an Even number", inputNum);
+}
+------------------------------------------------------------
+p5
+#include <stdio.h>
+// Program to check if a number is Even or Odd.
+
+int main()
+{
+    int inputNum = 0;
+    puts("Enter a number to check if it is Even");
+    scanf("%d", &inputNum);
+    if (inputNum % 2 == 0)
+        printf("%d is Even number", inputNum);
+    else
+        printf("%d is an Odd number", inputNum);
+}
+------------------------------------------------------------
+p6
+#include <stdio.h>
+// Program to print a number in different formats/base.
+
+int main()
+{
+    int num = 79;
+    printf("%d  %i  %o  %x  %X \n", num, num, num, num, num);
+    // 79  79 117  4f  4F
+    int num2 = 0173;
+    printf("%d  %i  %o  %x  %X \n", num2, num2, num2, num2, num2);
+    //     123 123  173 7b  7B
+    int num3 = 0x5d;
+    printf("%d  %i  %o  %x  %X \n", num3, num3, num3, num3, num3);
+    //     94   94  136 5d  5D
+}
+------------------------------------------------------------
+p7
+#include <stdio.h>
+// Program to do formatting on int number.
+int main() {
+    int num = 7955;
+    printf("%d\n", num);     // print num
+    printf("%6d\n", num);    // Allocate 6 character spaces and print num with right allignment
+    printf("%-6d\n", num);   // Allocate 6 character spaces and print num with left allignment
+    printf("%-6d**\n", num); // Allocate 6 character spaces and print num with left allignment and after that print 2 stars
+    printf("%07d\n", num);   // Allocate 6 character spaces and print num with right allignment and in empty spaces fill it with zeroes
+    printf("%3d\n", num);    // Allocate 3 character spaces and print num with right allignment [Here formatting is ignored and data is given priority]
+}
+/*
+7955
+  7955
+7955
+7955  **
+0007955
+7955
+*/
+------------------------------------------------------------
+p8
+#include <stdio.h>
+// Program to do formatting on float number.
+
+int main()
+{
+    float num = 795.907;
+    printf("%f\n", num);     // print num
+    printf("%12f\n", num);   // print num, allocate 12 spaces and right allignment
+    printf("%-14f\n", num);  // print num, allocate 14 spaces and left allignment
+    printf("%014f\n", num);  // print num, allocate 14 spaces and right allignment and fill spaces with zeros
+    printf("%.2f\n", num);   // print only 2 digits after decimal point
+    printf("%08.1f\n", num); // print num, allocate 8 spaces, print 1 digit after decimal point and fill with zeros
+    printf("%-8.1f\n", num); // print num with left allignment, alloctae 8 spaces and 1 digit of precision
+    printf("%05.0f\n", num); // print num with no precision and right allignment
+}
+------------------------------------------------------------
+p9
+#include <stdio.h>
+// Program to do formatting on string data.
+
+int main()
+{
+    char place[16] = "bengaluru";
+    printf("%s\n", place);
+    printf("%12s\n", place);
+    printf("%-11s***\n", place);
+    printf("%.4s\n", place);
+    printf("%5s\n", place);
+    printf("%2.4s", place);
+}
+------------------------------------------------------------
+Type casting (Conversion of data from one DT to another)
+Upcast: Conversion of a lower DT (int) to higher DT (float / double)
+Down cast: Conversion of a higher sized DT to lower sized DT (int to short int or float to int or double to float)
+Implicit Cast: The cast which happens implicitly
+Explicit cast: Where the cast is visible with code
+
+Down cast is more dangerours before there is chance of loss/change of data
+Up cast is not so dangerous yet not good: There is no change or loss of data but more memory will be used.
+
+Casting must be avoided. It is usually design errors.
+------------------------------------------------------------
+p10
+// Program to do understand type casting.
+int main() {
+    int num = 17 / 3;           // No Casting at all
+    printf("%d  %f", num, num); // 5   0.000000
+}
+------------------------------------------------------------
+p11
+
+17 / 3
+Here both numerator 17 and denominator 3, both are integers. When both N and D are integers, then Integer division happens where the quotient is integer.
+So, the o/p is 5
+
+If any of the N or D or both are float or double, then floating point division happens where the quotient may or may not be int always. Mean, to say, we can continue the division by taking decimal point.
+
+int main()
+{
+    float num = 17 / 3;         // One type casting happens. from 5 to 5.0f which is implicit up cast
+    printf("%f  %d", num, num); // 5.000000
+}
+------------------------------------------------------------
+p12
+
+int num = (float)((int) 17.5 / 2.0);
+
+1. 17.5 to 17 (explicit down cast from double to int)
+o/p: 17/2.0
+2. Now, 17 is casted to 17.0 (implicit up cast from int to double)
+o/p: 17.0/2.0 = 8.50000000
+3. 8.5 which is double is casted to float (explicit down cast from double to float)
+4. 8.5f is casted to 8 (implicit down cast from float to int)
+
+int main()
+{
+    int num = (float)((int)17.5 / 2.0);
+    printf("%d", num);
+}
+Ans is 8
+------------------------------------------------------------
+p13
+#include <stdio.h>
+// Program to do understand updation operators.
+int main() {
+    int x = 10, y = 3, z = -1;
+    x++;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 3 -1
+    ++x;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 3 -1
+    y = z--;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 -1 -2
+    z = --x;
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 -1 11
+    x = y++ + ++y;
+    //  -1  + 1
+    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 0  1  11
+}
+------------------------------------------------------------
