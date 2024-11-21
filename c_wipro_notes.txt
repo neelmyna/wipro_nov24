@@ -225,6 +225,7 @@ Special Characters called as ESCAPE SEQUENCES:
 \\		to print \
 \"		to print "
 \r		carriage return
+\0		end of string character
 
 DATA TYPES:
 Since much of the data are similar or can be categorized, we have the following basic or primitive DTs in C, namely:
@@ -279,11 +280,159 @@ putc(ch, stdout);
 
 gets(): used to read a string (space is also part of the i/p)
 
+puts(): used to write a string
+printf(): used to write a formatted string
+scanf(): used to read formatted string
+sprintf(): used to read a string from memory format it and store it back in memory (some other variable or same variable)
+sscanf(): Similar to sprintf()
+fprintf(): Used to write formatted string to file
+fscanf(): used to read formatter string from file
 
-puts()
-printf()
-scanf()
-sprintf()
-sscanf()
-fprintf()
-fscanf()
+FORMAT SPECIFIERS:
+%c		to print any of the 256 ASCII chars					1 byte
+%d		to print int number in decimal format				4 bytes
+%o		to print int number in octal format					4 bytes
+%x %X   to print int number in hexa-decimal format	4 or 	8 bytes
+%u		to print unsigned int number in decimal format		4 bytes
+%p		to print an address									4 bytes
+%s		to print a string (set of characters which is one data. String must end with end of string character which is \0 character)
+%f		to print float data									4 bytes
+%lf		to print double data								8 bytes
+%ld		to print long long int in decimal format			8 bytes
+--------------------------------------------------------
+DAY2 THURSDAY 21-11-2024
+
+Operators
+Output Formatting
+Type Casting
+Conditional programming
+Ternary Operator
+Switch case
+Loops
+Nested Loops
+Function call Stack
+
+OPERATORS:
+Arithmetic Operators: + - / % *
+
+num1 + num2
+values/numbers/input/operands
+
+1. All Arithmetic operators take 2 operands (All are Binary operators)
+2. The operator is placed in-between the operands (Infix notation)
+num1 num2 + Postfix notation
++ num1 num2 Prefix  notation
+3. Input are numbers and output is also a number
+4. Some operators have lesser precedence (+ - have less precedence than * / %)
+
+result = num1 + num2 * num3
+Here the multiplication is performed 1st (Broadmas rule)
+
+5. In the below statement, num1 - num2 is performed 1st. Thus all Arithmetic operations are performed from left to Right (Associtivity)
+result = num1 - num2 + num3
+
+6. 45 + 5.5
+
+num1 = 45
+num2 = -9
+sum = num1 + num2
+
+The operations can be performed only if the type of data of the operands are same.
+
+Note:
+0.0 is double which is of 8 bytes
+0.0f is float which is of 4 bytes
+
+How Negative numbers are stored in memory:
+
+int num = -23; // Signed integer
+signed int num = -23;
+signed long int num = -23; // MSB bit will be dedicated to store sign of the number.
+If MSB is 1 then the number is -ve. If MSB is 0 then the number is +ve
+
+-23
+23  (absolute of -23)
+10111
+
+0001 0111
+1110 1000
+        1
+1110 1001
+
+-1 * 2(7) + 1 * 2(6) + 1 * 2(5) + 9
+= -128 + 64 + 32 + 9
+= -64 + 41
+= -23
+
+-ve numbers are stored in memory using 2's compliment technique.
+
+RELATIONAL OPERATORS: > < >= <= != ==
+1. All are binary operators
+2. Used with Infix notation
+3. All relational operators have lesser precedence than arithmetic operators but they have higher precedence than logical operators
+4. I/P are numbers. O/P is Boolean
+5. Left to Right associtivity
+
+45 > 7  	true	1
+45 != 45 	false	0
+45 >= 40			1
+45 > 39 is same as 45 >= 40
+n <= 20 is same as n < 21
+
+In the above 2 statements, each of the statements are same.
+That is, what ever we write using >= or <= can be written using > and <
+Thus, it looks as if >= and <= are redundant.
+
+[10, 20] is closed interval. where both end values are included
+(20, 40) is open interval. Here the range is 21 to 39 (end values not included)
+[30, 50) Right open. Range is 30 to 49
+
+n >= 10 and n <= 20           n > 9 and n < 21
+n > 20 and n < 40
+n >= 30 and n < 50
+
+LOGICAL OPERATORS: & && | || !
+
+C1 & C2 & C3  	Here all conditions are always checked
+C1 && C2 && C3	Here if the C1 fails, then remaining conditions are not checked
+
+! is unary operator. All unary operators are to be used before the operand.
+In C, there is no bool DT. Hence true is implecitly converted to 1 and false to 0.
+Also note that all non-zero values incuding -ve numbers are treated as true and only zero is treated as false.
+
+I/P to logical operators is  truth values (boolean)
+O/P is also boolean
+
+Updation Operators: ++ --
+increment and decrement
+Both of these operators have 2 behaviour. Infix and Postfix
+
+Bitwise Operators: & | ^ ~ >> <<
+
+0 0 0 1 0 1 1 1  X
+0 0 0 0 1 1 0 0  Y
+
+0 0 0 0 0 1 0 0  &   4
+
+0 0 0 1 1 1 1 1  |  31
+
+0 0 0 1 1 0 1 1  ^  27
+
+1 1 1 1 0 0 1 1  ~Y
+-128 + 64 + 32 + 16 + 3 = -64 + 51 = -13
+
+
+1   1   0   1   1
+4   3   2   1   0 power 2
+
+X >> 3
+0 0 0 1 0 1 1 1  
+0 0 0 0 1 0 1 1
+0 0 0 0 0 1 0 1
+0 0 0 0 0 0 1 0  2
+
+Y << 2           
+0 0 0 0 1 1 0 0  Y =  8
+0 0 0 1 1 0 0 0  Y = 16
+0 0 1 1 0 0 0 0  Y = 32
+
