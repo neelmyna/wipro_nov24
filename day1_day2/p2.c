@@ -1,18 +1,20 @@
 #include <stdio.h>
-// Program to do understand updation operators.
+#include <math.h>
+// Program to check if a number if perfect square.
 
 int main()
 {
-    int x = 10, y = 3, z = -1;
-    x++;
-    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 3 -1
-    ++x;
-    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 3 -1
-    y = z--;
-    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 12 -1 -2
-    z = --x;
-    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 11 -1 11
-    x = y++ + ++y;
-    //  -1  + 1
-    printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 0  1  11
+    int averagScore = 0;
+    printf("Enter your average score to print result: ");
+    scanf("%d", &averagScore);
+    if (averagScore >= 0 && averagScore <= 50)
+        puts("Your result is Fail");
+    else if (averagScore <= 80)
+        puts("Your result is Second class");
+    else if (averagScore <= 95)
+        puts("Your result is First class");
+    else if (averagScore <= 100)
+        puts("Your result is Distinction");
+    else
+        puts("Invalid score entered");
 }

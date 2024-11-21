@@ -658,3 +658,71 @@ int main() {
     printf("X=%d, Y=%d, Z=%d \n", x, y, z); // 0  1  11
 }
 ------------------------------------------------------------
+STEPS TO SOLVE A PROBLEM:
+
+HOW TO SOLVE A PROBLEM
+
+1. Understand the problem. Recognise the required data (I/P). Isolate/remove the unwanted information and data. Focus on the relevant information. Accertain what should be the O/P.
+Outcome: We know the I/P, O/P and the relevant information
+
+2. Build the solution using trial and error technique or mathematical formula or using a specific Algorithm. In this step we must not even think of programming.
+OutCome: We know the what is the solution(s)
+
+3. Write the Algorithm. Every step of the algorithm must be simple, unambigious and finite.
+OutCome: We have a clear visible solution as a procedure
+
+4. Write the Fake-code (Pseudocode) 
+OutCome: You have a solution that looks like a code
+
+5. Code it (via the language syntax)
+
+6. Good coding practices, naming standards, documentation, unit-testing, debugging
+
+7. Efficiency of algorithms, Optimization, development, DevOps, Cyber Security, Installation, Maintainance
+-----------------------------------------------------------------------
+p14
+Check if a number is Perfect Square
+
+45  6.7  6  36
+81  9.0  9  81
+40  6.3  6  36
+
+Read N
+ROOT = root(N)
+ROOT = floor(ROOT)
+if ROOT * ROOT is equal to N
+	yes: N is perfect square
+	no:  N is not perfect square
+
+sqrt()
+double sqrt(double);
+	
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    unsigned int inputNumber = 0;
+    int rootNumber = 0;
+    printf("Enter number to check if is perfect square: ");
+    scanf("%u", &inputNumber);
+    rootNumber = (int)sqrt(inputNumber);
+    if (rootNumber * rootNumber == inputNumber)
+        printf("%u is a perfect square", inputNumber);
+    else
+        printf("%u is not a perfect square", inputNumber);
+}
+-----------------------------------------------------------------------
+p21
+Accept average score from the user and print the result as follows:
+0  - 50 Fail
+50 - 80 Second Class
+81 - 95 First class
+96 -100 Distinction
+Also check for invalid score
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------

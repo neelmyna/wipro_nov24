@@ -1,4 +1,23 @@
 ASSIGNMENTS:
 
-1. Add the prototypes of the I/P functions which the trainer gave
-2. 
+1. Add the prototypes of the I/P functions which the trainer gave on day1.
+2.
+
+p14
+Check if a number is perfect square
+p15
+Check if a character is an alphabet
+p16
+Check if a character is an alphanumeric
+p17
+Check if a character is a digit
+p18
+Check if a letter is small case
+p19
+Check if a year is Leap year
+p20
+Declare 3 character variables and accept values, raining=r sunny=s cloudy=c
+Allow the person to go out only if it is:
+	1. only sunny
+	2. sunny and raining
+
