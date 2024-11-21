@@ -719,10 +719,56 @@ Accept average score from the user and print the result as follows:
 81 - 95 First class
 96 -100 Distinction
 Also check for invalid score
+
+#include <stdio.h>
+#include <math.h>
+// Program to check if a number if perfect square.
+
+int main()
+{
+    int averagScore = 0;
+    printf("Enter your average score to print result: ");
+    scanf("%d", &averagScore);
+    if (averagScore >= 0 && averagScore <= 50)
+        puts("Your result is Fail");
+    else if (averagScore <= 80)
+        puts("Your result is Second class");
+    else if (averagScore <= 95)
+        puts("Your result is First class");
+    else if (averagScore <= 100)
+        puts("Your result is Distinction");
+    else
+        puts("Invalid score entered");
+}
 -----------------------------------------------------------------------
+p15
+#include <stdio.h>
+#include <ctype.h>
+// Program to check if a character is an alphabet
+
+int main()
+{
+    char ch = '\0';
+    printf("Enter a character to check if it is an alphabet: ");
+    scanf("%c", &ch);
+    if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+        puts("Yes! its an alphabet");
+    else
+        puts("No! its not an alphabet");
+    fflush(stdin);
+    printf("Enter a character to check if it is an alphabet: ");
+    scanf("%c", &ch);
+    if (isalpha(ch))
+        puts("Yes! its an alphabet");
+    else
+        puts("No! its not an alphabet");
+}
+-----------------------------------------------------------------------
+p22
+Find smallest among 3 distinct numbers
 
 -----------------------------------------------------------------------
-
------------------------------------------------------------------------
+p23
+Find biggest among 3 distinct numbers using ternary operator
 
 -----------------------------------------------------------------------
