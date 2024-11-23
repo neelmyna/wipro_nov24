@@ -1,30 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-// Find sum of Odd placed Even digits in a number
+// p29 Count the number of Even digits in a number
+
+int countEvenDigits(int n)
+{
+    int countOfEvenDigits = 0, remainderDigit = 0;
+    while (n != 0)
+    {
+        remainderDigit = n % 10;
+        n = n / 10;
+        if (remainderDigit % 2 == 0)
+            countOfEvenDigits++;
+    }
+    return countOfEvenDigits;
+}
+
 int main(int argCount, char *args[])
 {
-    int inputNumber = atoi(args[1]);
-    int sumOfDigits1 = 0, sumOfDigits2 = 0, flip = 0, remainderDigit = 0;
-    printf("User given number is %d \n", inputNumber);
-    while (inputNumber != 0)
-    {
-        remainderDigit = inputNumber % 10;
-        inputNumber = inputNumber / 10;
-        if (flip == 0)
-        {
-            if (remainderDigit % 2 == 0)
-                sumOfDigits1 += remainderDigit;
-            flip = 1;
-        }
-        else
-        {
-            if (remainderDigit % 2 == 0)
-                sumOfDigits2 += remainderDigit;
-            flip = 0;
-        }
-    }
-    if (flip == 1)
-        printf("Sum of Odd placed Even digits is %d", sumOfDigits1);
-    else
-        printf("Sum of Odd placed Even digits is %d", sumOfDigits2);
+    int input_number = atoi(args[1]);
+    printf("User given number is %d \n", input_number);
+    int countOfEvenDigits = countEvenDigits(input_number);
+    printf("Count of Even Digits = %d", countOfEvenDigits);
 }
