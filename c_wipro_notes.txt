@@ -997,6 +997,24 @@ Count the number of Even digits in a number
 *p30
 Find sum of Even placed digits in a number
 
+455632
+
+flip=0
+
+sum1=2+6+5
+sum2=3+5+4
+
+4556327
+
+flip=1
+sum1=7+3+5+4
+sum2=2+6+5
+
+After the loop, if flip is 0 then sum of Even placed digits will be in sum1
+After the loop, if flip is 1 then sum of Even placed digits will be in sum2
+After the loop, if flip is 0 then sum of Odd placed digits will be in sum2
+After the loop, if flip is 1 then sum of Odd placed digits will be in sum1
+
 ----------------------------------------------------------------------
 p31
 Find sum of Odd digits in a number
