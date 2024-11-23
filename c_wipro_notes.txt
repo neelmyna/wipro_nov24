@@ -771,4 +771,261 @@ Find smallest among 3 distinct numbers
 p23
 Find biggest among 3 distinct numbers using ternary operator
 
+
+#include <stdio.h>
+// Program to find biggest of 2 numbers
+
+int main()
+{
+    int num1 = 0, num2 = 0, nigNum = 0;
+    puts("Enter 2 numbers to find biggest");
+    scanf("%d%d", &num1, &num2);
+    if (num1 > num2)
+        printf("%d is biggest", num1);
+    else if (num2 > num1)
+        printf("%d is biggest", num2);
+    else
+        printf("Both numbers are same");
+}
+------------
+#include <stdio.h>
+// Program to find biggest of 2 numbers
+
+int main()
+{
+    int num1 = 0, num2 = 0, bigNum = 0;
+    puts("Enter 2 numbers to find biggest");
+    scanf("%d%d", &num1, &num2);
+    bigNum = (num1 > num2) ? num1 : num2;
+    printf("%d is biggest", bigNum);
+}
+------------
+#include <stdio.h>
+// Program to find biggest of 3 numbers
+int main() {
+    int num1 = 0, num2 = 0, num3 = 0, smallNum = 0;
+    puts("Enter 3 numbers to find smallest");
+    scanf("%d%d%d", &num1, &num2, &num3);
+    smallNum = (num1 < num2 && num1 < num3) ? num1 : (num2 < num3) ? num2 : num3;
+    printf("%d is smallest", smallNum);
+}
 -----------------------------------------------------------------------
+p24 
+#include <stdio.h>
+// Accept day number from the user and print the event of the college fest
+
+int main() {
+    int dayNumber = 0;
+    puts("Enter the day number to print the event");
+    scanf("%d", &dayNumber);
+    switch(dayNumber) {
+        case 1 : puts("Monday Sports"); break;
+        case 2 : puts("Tuesday Technical"); break;
+        case 3 : puts("Wednesday Cultural"); break;
+        case 4 : puts("Thursday Ethnic"); break;
+        case 5 : puts("Friday Funky"); break;
+        case 6 : puts("Saturday Charity"); break;
+        default: puts("Go back home and sleep");
+    }
+}
+-----------------------------------------------------------------------
+p25
+#include <stdio.h>
+// Show Menu to customer and accept the food-number from the customer and serve him the food.
+
+int main() {
+    int foodNumber = 0;
+    puts("Welcome to our Hotel \"THE TASTE\"");
+    puts("1:Idly-Vada 2:Dosa 3:Poha 4:Alu-Paratha 5:Roti-Sabji. Your choice please");
+    scanf("%d", &foodNumber);
+    switch(foodNumber) {
+        case 1 : puts("Yummy idli-vada"); break;
+        case 2 : puts("Tasty Mysuru Dosa"); break;
+        case 3 : puts("Soft Bhopal Poha"); break;
+        case 4 : puts("Spicy Punjabi Paratha"); break;
+        case 5 : puts("Hot and Sweet Roti-Sabji"); break;
+        default: puts("Sorry we dont have the food you wish");
+    }
+}
+-----------------------------------------------------------------------
+DAY3 23-11-2024 SATURDAY
+LOOPS
+for 		When the number of iterations is known before start of the loop.
+while		When number of iterations is unknown.
+do-while	When number of iterations is unknown, but it is at least one.
+
+
+p26
+restaurant program with nestes switch-case
+#include <stdio.h>
+// Ask the customer if she wish to have Veg or NonVeg and then Show the specific Menu to customer and accept the food-number from the customer and serve her the food.
+
+int main()
+{
+    int foodNumber = 0, foodType = 0, choice = 0;
+    puts("Welcome to our Hotel \"THE TASTE\"");
+    do
+    {
+        puts("1:Veg 2:NonVeg. Your choice please: ");
+        scanf("%d", &foodType);
+        switch (foodType)
+        {
+        case 1:
+            puts("1:Idly-Vada 2:Dosa 3:Poha 4:Alu-Paratha 5:Roti-Sabji. Your choice please");
+            scanf("%d", &foodNumber);
+            switch (foodNumber)
+            {
+            case 1:
+                puts("Yummy idli-vada");
+                break;
+            case 2:
+                puts("Tasty Mysuru Dosa");
+                break;
+            case 3:
+                puts("Soft Bhopal Poha");
+                break;
+            case 4:
+                puts("Spicy Punjabi Paratha");
+                break;
+            case 5:
+                puts("Hot and Sweet Roti-Sabji");
+                break;
+            default:
+                puts("Sorry we dont have the food you wish");
+            }
+            break;
+        case 2:
+            puts("1:ChickenFry 2:MuttonBiryani 3:FishCurry. Your choice please");
+            scanf("%d", &foodNumber);
+            switch (foodNumber)
+            {
+            case 1:
+                puts("Yummy chicken");
+                break;
+            case 2:
+                puts("Tasty biryani");
+                break;
+            case 3:
+                puts("Spicy fish curry");
+                break;
+            default:
+                puts("Sorry we dont serve lizards and snakes");
+            }
+            break;
+        default:
+            puts("Maam, this is Restaurant and not Garden");
+        }
+        puts("Do you wish to have more? Yes:1, No:2. Your choice plz: ");
+        scanf("%d", &choice);
+    } while (choice == 1);
+    puts("Namaste Visit Again");
+}
+------------------------------
+p27
+// program to print Math table of a number till multiples of of 20
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argCount, char *args[])
+{
+    int input_number1 = atoi(args[1]);
+    int input_number2 = atoi(args[2]);
+    for (int i = 1; i <= 20; i++)
+    {
+        printf("%d * %02d = %03d \t %d * %02d = %03d \n", input_number1, i, input_number1 * i, input_number2, i, input_number2 * i);
+    }
+}
+/*
+ 7 * 1 = 7
+ 7 * 2 = 14
+*/
+-----------------------------------------------------------------------
+p28
+Find the biggest and smallest digits in a number
+
+biggest_digit  = 0 4 4 6 7
+smallest_digit = 9 4 3 3 3
+
+576345
+76345
+7634
+
+10) 7634 (763
+    7630
+	   4
+
+10) 763 (76
+    760
+	  3
+
+Read N
+SMALL_DIGIT = 9
+BIG_DIGIT = 0
+TEMP_NUMBER = N
+until N is not 0 do:
+	REMAINDER_DIGIT = N % 10
+	N = N / 10
+	if SMALL_DIGIT > REMAINDER_DIGIT then:
+		SMALL_DIGIT = REMAINDER_DIGIT
+	if BIG_DIGIT < REMAINDER_DIGIT then:
+		BIG_DIGIT = REMAINDER_DIGIT
+print SMALL_DIGIT
+print BIG_DIGIT
+
+Note that the N becomes zero at end of the loop
+
+int main(int argCount, char *args[]) {
+    int input_number = atoi(args[1]);
+    printf("User given number is %d \n", input_number);
+    int small_digit = 9, big_digit = 0, remainder_digit = 0;
+    while (input_number != 0)
+    {
+        remainder_digit = input_number % 10;
+        if (small_digit > remainder_digit)
+            small_digit = remainder_digit;
+        if (big_digit < remainder_digit)
+            big_digit = remainder_digit;
+        input_number = input_number / 10;
+    }
+    printf("Smallest digit = %d, Biggest Digit = %d", small_digit, big_digit);
+}
+----------------------------------------------------------------------
+p29
+Count the number of Even digits in a number
+
+----------------------------------------------------------------------
+*p30
+Find sum of Even placed digits in a number
+
+----------------------------------------------------------------------
+p31
+Find sum of Odd digits in a number
+
+----------------------------------------------------------------------
+p32
+Check if a number is Palindrome
+
+----------------------------------------------------------------------
+p33
+Find sum of Odd placed Even digits in a number
+
+----------------------------------------------------------------------
+p34a
+Find sum of the series: n + n2 + n3 + .... 10 terms
+
+p34b
+Find sum of the series: 1 - n + n2 - n3 + .... m terms
+
+p34c
+Find sum of the series: n - n2/3 + n4/5 - n8/7 + .... m terms (1<=n<=3,1<=m<=10)
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+
+----------------------------------------------------------------------
+
+----------------------------------------------------------------------
+
+
