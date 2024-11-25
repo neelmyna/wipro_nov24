@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 
-int inputNumber = 0; // Global variable, because declared outside the functions
+static int inputNumber = 0; // Global variable, because declared outside the functions
 
 int checkPrime(int number)
 {

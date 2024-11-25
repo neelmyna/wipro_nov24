@@ -1305,8 +1305,14 @@ STATIC GLOBAL VARIABLE:
 If we wish to have a global variable in a file, but we dont want any other file to access it (functions from other files) then make it static.
 Thus, a static global variable has file scope. And its life is life of the program.
 ----------------------------------------------------------------------
-Memory management of a program:
-code area, GDS, Stack area and Heap area
+Topics of the day:
 
-Different Stages of a program:
+1. Terminologies in Functions.
+2. Memory management of a program:
+code area, GDS, Stack area and Heap area
+3. Different Stages of a program:
+4. Storage classes
+5. Function Call Stack
+6. Evolution of Programming langugaes
+7. Pointers
 
