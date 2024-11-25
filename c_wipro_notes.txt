@@ -1195,7 +1195,28 @@ int main(int argCount, char *args[])
 }
 
 ----------------------------------------------------------------------
+Multi File Program
 
+Step1: 
+create a header file (.h file) 
+the .h file will have only function declarations
+the .h file will have respective .c file where the functions are defined.
+
+The functions are to be defined for the solution of the given problem. The functions in a file should be related (modular). Example, all the I/O functions are grouped into stdio.h and all string handling functions are grouped into string.h
+
+For example, in College Management System Application, Assume the entities are:
+Faculty and Student
+So the faculty related functions will be put into faculty.h and these functions are then defined/implemented in faculty.c
+Similarly we will have student.h and student.c
+
+Now, this solution will be later used in the driver code (user code)
+
+
+Prime number example:
+
+Divide 50 from 2 till 25 only, because
+X  any number > X/2 till X-1 cannot divide X
+	
 ----------------------------------------------------------------------
 
 
