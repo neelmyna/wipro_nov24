@@ -1521,3 +1521,30 @@ FS development tech Stack
 AI
 -----------------------------------------------------------------
 POINTERS:
+
+Unary &
+"Address of"
+It can be applied only to a variable. And we get the address of the variable.
+Pointers are also variables and thus we can apply & to pointers as well.
+
+Unary *
+"De-referencing" or "value-at"
+It can be applied only to an address. And we get the value present in that address.
+Pointers hold address, and thus we can apply * to pointers as well.
+We always de-reference (fetch) the complete size of a variable.
+
+int num = 50;
+A number like 'num' whose value is 50, is just a nunber. It has no unit or property.
+However, an address always has a property called "LENGTH/SIZE of the DT" property.
+
+The size of a pointer irrespective of its DT including structure types is always same for a given OS. 
+We observed that the size of a pointer on windows is 4 bytes and on unix/linux is 8 bytes.
+
+A pointer of DT X* can point to a variable of only type X
+
+Types of pointers:
+Normal pointer
+NULL pointer
+const pointer
+dangling pointer
+wild pointer
