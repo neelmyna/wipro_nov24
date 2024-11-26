@@ -1590,3 +1590,15 @@ int array3[10] = {20, 5, 9, 11, 0, -2}; // remaining 4 elements will be zero. Bu
 When we initialize an array, it is better not to mention its size.
 
 * A 2D array is actually 1D array in memory/physically
+* Name of an array is always address of the 1st element in the array.
+* Thus, name of the array + 1 will be the address of 2nd element in the array. 
+* When we apply * to name of the 1D array, then we get the value of 1st element of the array.
+* When we apply & to the name of the array, it behaves like address of the whole array. Thus, &array+1 will give the address of next 1D array
+* The index of an array starts from 0
+* The last index of an array is size-1
+
+Problems on Arrays:
+1. Find the smallest and biggest elements of the array of size N which is given by user (array is of type double)
+2. Find the frequesvy of an element of user choice in an raay of size N which is also given user (array is of type int)
+3. Reverse an array of size N of type float
+4. Remove duplicate elements in an array. After removal, the position of the removed elements must not be empty.

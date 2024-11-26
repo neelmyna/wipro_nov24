@@ -67,9 +67,13 @@ float fArray[] = {2.2f, 4.4f, 1.5f, 9.1f, 6.75f};
 print these:
 
 fArray, fArray+1, fArray-1, fArray+2
+// All of these are addresses
+
 
 *fArray, *fArray+1, *fArray + *fArray
+// All of these are values
+
 
 &fArray, &fArray+1, &fArray-1, &fArray+2
-
+// All of these are addresses
 
