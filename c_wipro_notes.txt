@@ -1316,3 +1316,208 @@ code area, GDS, Stack area and Heap area
 6. Evolution of Programming langugaes
 7. Pointers
 
+Function Call Stack:
+
+WE all know that the computer has CPU. The CPU has processor. The Processor has ALU, Signal unit and Registers.
+Registers are memory units within the processor.
+There are 2 types of registers
+General purpose and Special purpose
+The general purpose registers can be used to store anything.
+
+However, the Special purpose registers can be used only for specific purpose. Following are the special	purpose registers:
+
+Accumalator: It is used to store intermediate results
+For example, in x+y+z the values of x and y are brought from memory and are stored in registers.
+The x+y value is then store in accumalator which will be later added to z.
+
+IR: Instruction register
+It stores address of the current instruction that is getting executed.
+
+PC: program counter
+It holds address of next instruction to be executed
+
+FP: Frame pointer
+It holds address of the frame of the function which is currently running
+
+SP: It holds address of the top frame in the Stack.
+
+Other than these, we have MAR and MDR also.
+
+Frame: A frame roughly is the memory allocated to a function. Contents of a frame are:
+local variables (if any)
+function arguments (if any)
+addresses of the called functions (callee) (if any)
+return address (if any)
+-----------------------------------------
+DAY5 TUESDAY 26-11-2024
+
+1. Evolution of Programming langugaes
+2. Pointers
+3. Recursive function
+4. Arrays
+
+It all started with Off-On
+The off and on were seen as 0s and 1s
+The Pattern of 0s and 1s were later used to assume the characters which humans work with (alphabets, symbols, digits etc)
+Then for standardization, character sets like ASCII were introduced
+Later human friendly language (HFL) was the need
+Hence the 1st successful HFL was Assembly language
+In Assembly LANGUAGE, Nmemonics were used.
+Like, add, mul, sub, mov, cop
+add x, y
+This will add x and y and store the result in x
+However, Aseembly language was not modular, not procedural and there no libraries.
+Hence professional then started to build languages depending on their requirements, projects and domain.
+Thus, the languages later appeared were domain specific. Like, Fortran which is Formula translation which is suitable only for algebraic and engineering applications.
+COBOL which is good for only Business and Finance Applications.
+
+Here, the problem is the languages cannot be used for other domains. And the engineers are forced to learn new languages for every new domain.
+
+Hence the need was Domain Friendly language.
+
+Modularity:
+The code we define/implement, for real life Applications and software will be huge. Hence proper organising and arranging the code is very much necessary. Thus grouping the code into files and folders or packages or modules were intoduced.
+
+Procedural:
+As we know now that we solve very big applications that have huge amounts of code, the given big problem must be divided and then conquered.
+
+Thus the big problem is divided into smaller sized problems (1st they are divided in terms of entities and later in terms of functionalities).
+
+For solving this smaller sized problem (which must atomic in nature and must represent a real life functionality) we difine a procedure/behaviour/function/definition which is the implementation.
+
+Thus a function solves an atomic real life problem (business rule)
+A function/procedure that solves only one problem is said to be HIGH COHESIVE
+The functions/procedures that communicate to each other and thus solving the problems are said to be LOOSELY-COUPLED solution.
+
+If a function/instruction/program/class etc.. solves 2 or more problems then it is said to be LESS/LOW COHESIVE and these functions/etc. leads to TIGHTLY COUPLED SOLUTIONS.
+
+Thus, High Cohesion leads to Loose Coupling
+Low Cohesion leads to Tight Coupling
+
+The low cohesive functions/methods naturally become less usable.
+
+In 1960s, the compitition and hunt for programming languages were on extreme rise.
+Simula67 was a OOPL which came with the concept called as Class
+This was later used by almost all OOPLs
+
+Here, class is to implement a real life entity from any domain.
+Note that the purpose of an OOPL is to make the language domain friendly.
+
+Lets take the banking domain 
+Entities are:
+account 
+transaction
+
+class Account
+	acc_num
+	balance
+	type
+	name
+	phone_number
+	
+	create()
+	delete()
+	freeze()
+	modify()
+	search()
+	list()
+	
+class Transaction
+	id
+	acc_num
+	type
+	datetime
+	amount
+	
+	deposit()
+	withdraw()
+	change_pin()
+	mini_stmt()
+	long_stmt()
+	
+Domain: Telecom
+Entity: Call
+
+class PhoneCall
+	imsi
+	imei
+	location_id
+	duration
+	datetime
+	callee_number
+	
+	makeCall()
+	dropCall()
+	addCall()
+	holdCall()
+	mergeCall()
+	
+The Birth of C and Unix:
+1960s
+
+All the business-men they got to know that it is not possible to do business without using computer.
+In other words, computers help business to improve.
+
+But to use a computer we need minimum software and Apps and these put together are called OS.
+
+So, the need was a good OS.
+
+In the competition of building an OS, AT & T Bell Labs too said, they will build an OS which is multi programming and multi user.
+
+They started by 1961
+2 years they took to build a language named B
+It did not do well
+Another 3 years they took to build a new language named BCPL
+They thought it was good, so using BCPL, they built Multix OS
+Later in 9167, Danies Ritchie handled the team
+So he changed the language BCPL to C which came in 1970
+Using C, they built and transalated Multix to Unix
+So, in 1972, a wonderful language C and a extremely powerful OS unix were built.
+They were built BY THE PROFESSIONALS FOR THE PROFESSIONALS.
+
+C was aqccepted widely because:
+1. Easy to use
+2. Modular and procedural
+3. Memory efficient (Stack based) and DMA is there
+4. Data binding can be done using structure
+5. Can be used for developing all kind of software
+6. domain friendly
+7. Very fast at runtime
+8. Syncs well with different levels of Development
+
+Using C, C++ was built, C with Classes language was built by Apple,
+Java was built after C++
+
+Unix:
+HP UX is Unix
+Apple Mac OS is Unix
+Linux is Unix
+IBM AIX is unix
+SUN Microsystems Solaris is Unix
+ZoS is also built on Unix
+Android uses the same Unix Architecture
+
+Birth Of C++:
+When C was built, everything looked so great.
+But though the language is so good, but the startegy is not good.
+
+Once a software is built, it undergoes lot of changes.
+Hence we need a language that is useful to build the software in different levels and also must allow modifications easily.
+
+Hence the answer is C++
+Bjarne Stroustrap used Inheritance to build C++
+
+C++ is Increment to C
+The increment is OOP concepts/features
+
+Thus C++ = C + OOP
+Thus, C is not disturbed at all while building C++
+
+To overcome the short comings of C++, James Golsling built Java in 1990s
+
+Windows
+Android
+FS development tech Stack
+AI
+-----------------------------------------------------------------
+POINTERS:
