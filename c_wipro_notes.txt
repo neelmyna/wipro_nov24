@@ -1542,9 +1542,51 @@ We observed that the size of a pointer on windows is 4 bytes and on unix/linux i
 
 A pointer of DT X* can point to a variable of only type X
 
-Types of pointers:
-Normal pointer
-NULL pointer
-const pointer
-dangling pointer
-wild pointer
+TYPES OF POINTERS:
+Normal pointer:
+A pointer pointing to an existing variable of proper data type. Thus, the pointer can be used to access the variable.
+
+NULL pointer: A pointer whose value is NULL. It means, the pointer is not pointing to any variable.
+
+const pointer:
+	1. Pointer to a constant address: A pointer using which we cannot modify the data of the variable to which the pointer is pointing to. However, the pointer can point to some other variable.
+	2. constant pointer: A pointer which is pointing to a variable and it can modify the data of the variable. But it cannot point to any other variable.
+	3. Pointer is both ways constant: It cannot point to any other variable nor it can modify the value of the variable to which it is pointing to.
+
+dangling pointer: A pointer which is still holding address of the memory location which is de-allocated.
+The memory is de-allocated, but the pointer is still holding that address.
+
+wild pointer: 
+An un-initialized pointer is called as wild pointer.
+------------------------------------------------------------------------
+ARRAY:
+An Array was 1st introduced to bring down the number of names we have to create.
+Example, if we have to store 500 values then we need 500 variables. But handling or comprehending 500 names is too difficult.
+Hence the array was introduced where irrespective of number of values (variables) we use only one name.
+
+We use the subscript operator to create and use an Array.
+float ages[25];
+
+* Here we can store 25 values, all of type float in the array ages.
+* All the 25 values will be stored in continuous memory locations. Thus there is no gap between any 2 consecutive elements of the array.
+* The size of the array is fixed at the time of its creation and it cannot be modified later.
+* Since the size of an array is fixed, the array is an Memory in-efficient data structure.
+* Array is an data structure because all the elements of the array are arranged.
+* We call something as data structure when the data in memory is not just stored but also arranged (structured/organised) in a specific form. This specific form helps in achieving either time efficiency or space efficiency or simplicity.
+* Time taken to access any element in an array is almost same. This is because how the array is implemented. Hence Array is Time efficient DS. The time taken to access an element is also called as Look-Up and its efficiency is O(1), that is one unit time.
+* An Array is very easy to use and very commonly used where ever the size is smaller and predictable.
+* An Array is implemented using pointer and pointer arithmetic
+
+POINTER ARITHMETIC:
+Any arithmetic that involves an address is called as pointer arithmetic
+The only possible pointer arithmetic are:
+address + number 	is an address
+address - number 	is an address
+address - address	is a number (This happens with the addresses of any 2 elements of an array to know the number of elements in between these 2 addresses)
+
+int array1[10] = { 0 }; // all elements will be zero
+int array2[] = {2, 4, 5, 8, 9}; // size is taken automatically
+int array3[10] = {20, 5, 9, 11, 0, -2}; // remaining 4 elements will be zero. But this is a bad way of initializing the array.
+When we initialize an array, it is better not to mention its size.
+
+* A 2D array is actually 1D array in memory/physically

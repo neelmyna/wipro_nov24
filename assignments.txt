@@ -21,6 +21,7 @@ Allow the person to go out only if it is:
 	1. only sunny
 	2. sunny and raining
 -------------------------------------------------------------
+p29
 FARMER PROBLEM STATEMENT
 
 Mahesh is a farmer and owns 80 acres of land. His land is equally divided into 5 segments. He grows tomatoes in the 1st segment, potatoes in the 2nd segment, cabbage in the 3rd segment, sunflower in the 4th segment and sugarcane in the 5th segment.
@@ -58,3 +59,17 @@ sugarcane_yeild_tonnes = each_segment * 45
 sugarcane_sales_amount = sugarcane_yeild_tonnes * 4000
 
 total_sales_amount = tomato_sales_amount + potato_sales_amount + sunflower_sales_amount + sugarcane_sales_amount
+------------------------------------------------------------
+Why an un initialized pointer is called as wild pointer ?
+
+float fArray[] = {2.2f, 4.4f, 1.5f, 9.1f, 6.75f};
+
+print these:
+
+fArray, fArray+1, fArray-1, fArray+2
+
+*fArray, *fArray+1, *fArray + *fArray
+
+&fArray, &fArray+1, &fArray-1, &fArray+2
+
+
