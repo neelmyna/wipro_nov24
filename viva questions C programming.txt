@@ -1,0 +1,70 @@
+Viva Qs on C
+
+1. What is the size of the DT short unsigned int
+2. Is C programming Modular ? How do you implement it
+3. What is an object file?
+4. When does the Interpretation happens in C?
+5. What do you mean Data binding ?
+6. What is the prototype of strlen()
+7. What is the alternative to the -> operator ?
+8. Give 2 differences between Array and structure?
+9. Give 2 similarites between Array and DS.
+10. What is efficiency of Binary Search ?
+11. What is the efficiency of finding biggest element in a Array?
+12. What is the efficiency of deleting a node from a LL?
+13. What is a DS ?
+14. Mention any one Domain oriented Language
+15. Why do we store \0 in a string ?
+16. What are command line arguments and how many args does main() receive ?
+17. What do we achive using structures ?
+Space or Data Abstraction or ease of sending args to functions ?
+18. What are the manipulators we can apply on the DT int
+19. What are the manipulators we can apply on the DT float ?
+20. From inside a loop, where does the break and continue statements take the control to ?
+21. What does the Escape sequence \a does ?
+22. Whish is the keyword used to retain the life of a local variable until end of the program ?
+23. Give me an application of do-while loop ?
+24. When should we not use for loop ?
+25. What is the use of '&'in scanf()
+26. To store an address of a 2D Array, what do we need ?
+27. Which format specifier must be used to print an address ?
+28. Which function is used to read an unformatted string from console ?
+29. What is the prototype of malloc()
+30. Why does malloc() return the address as void*
+31. What does the ~ operator do ?
+32. What is short circuting? What is the syntax to use it ?
+33. What happens if we write ++i instead of i++ in for() loop
+34. What happens if  function is less cohesive? 
+35. What is the advantage of a function solving one problem? and what it is called as ?
+36. What is a BASE/Exit Condition in a Recursive function ?
+37. What is a Call Stack ?
+38. What are the contents of a Frame ?
+39. What is a Return Address ?
+40. What is the Scope of a Local Static Variable ?
+41. What is the scope of a global static variable?
+42. What is the life of a local variable?
+43. What you mean by De-refrencing an address ?
+44. Why an address cannot be a number ?
+45. What is Pointer Arithmetic ?
+46. How many Pointer arithmetic are there and which are they ?
+47. What is Dangling Pointer ?
+48. What is a Wild Pointer ?
+49. What is NULL and what is \0
+50. Is an Array memory efficient DS ?
+51. What is the efficiency of accessing an element from a 2D Array ?
+52. What is the efficiency of inserting an element in between 2 elements in an Array ?
+53. How do you release the memory allocated in the Heap ?
+54. How many arguments does malloc() take ?
+55. Which function is used to reposition the fp in a file ?
+56. Which function is used to reposition the file pointer to the beggining of a file ?
+57. Which function is used to check if fp has reached EOF ?
+58. What is the prototype of feof()
+59. Which function is used to find a sub string in a string in C ?
+60. What is the job LINKER/Linking ?
+61. How does the OS send ans receive all the data to and from a program/app ?
+62. what is type casting ?
+63. what is down cast ?
+64. what is explicit cast ?
+65. What is call by value ?
+66. what is call by address ?
+67. Which of the following operators has highest priority?
