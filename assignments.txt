@@ -101,8 +101,43 @@ PROBLEMS ON RECURSIVE FUNCTIONS:
 3. Find smallest number in an array of size N
 4. Print the Fibo series of N terms (1st 2 terms are 1 and 2)
 ---------------------------------------------------
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argCount, char *args[])
+{
+    int numberOfLines = atoi(args[1]);
+
+    for (int i = 1; i <= numberOfLines; i++)
+    {
+        for (int j = 1; j <= numberOfLines; j++)
+        {
+            putc('*', stdout);
+            putc(' ', stdout);
+        }
+        putc('\n', stdout);
+    }
+}
+
+/*
+ * * * * *
+ * * * * *
+ * * * * *
+ * * * * *
+ * * * * *
+ */
+---------------------------------------------------
 PROBLEMS ON 2D ARRAYS:
 Find sum of 2 matrices
 Find the transpose of a matrix
 Find product of 2 matrices
 find sum of the total score of all players
+
+Git Lab:
+create a project
+Give the credentials
+choose public
+un check project config
+Click upload file otpion to ipload files
+OR use drag and drop
+---------------------------------------------------
