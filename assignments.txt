@@ -76,4 +76,21 @@ fArray, fArray+1, fArray-1, fArray+2
 
 &fArray, &fArray+1, &fArray-1, &fArray+2
 // All of these are addresses
+---------------------------------------------------------------------
+
+* An Array is a variable of variables.
+* The need of an Array arose to overcome the problem of
+maintaining too many variable names.
+* In an Array all the elements are of same DT and same size.
+* In java, an Array is an Object.
+* Size of an Array must be fixed at the time of declaration.
+* Size of an Array is always fixed and it cannot ever be changed.
+* To access/reach an element in an Array, we use the INDEX
+within the subscript.
+* Index of any Array starts with Zero and ends with n-1 where
+n is size of the Array.
+* An Array is a DS. (Linear)
+* An Array is Memory IN-EFFICIENT DS.
+* Time taken to access any element in an Array is same.
+i.e. O(1) (one unit of time). Hence an Array is Time Efficient DS
 
