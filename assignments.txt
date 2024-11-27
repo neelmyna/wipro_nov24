@@ -141,3 +141,132 @@ un check project config
 Click upload file otpion to ipload files
 OR use drag and drop
 ---------------------------------------------------
+Strings
+
+A string is a data
+A string is made up of one or more characters
+A string can be roughly devided into 2:
+	Alphabetic
+	Alphanumeric
+
+All the characters of a string together make-up one data
+For example, "Ayodhya"
+
+This data is a place name. Thus all the 7 characters of it together is one data.
+To store one character, we need one character variable.
+Thus to store "Ayodhya" we need 7 character variables.
+
+char ch1 = 'A', ch2 = 'y', ch3 = 'o', ch4 = 'd', ch5 = 'h', ch6 = 'y', ch7 = 'a';
+
+Now, we have store one data in 7 variables.
+If we wish to send this one data to a function, then we must send 7 args.
+
+However, passing one Arg as one data is good.
+Hence We must save these 7 characters which are closely related together in one variable.
+Hence we use charcater arrays to store string data.
+
+char placeName1[] = "Ayodhya";
+Here we have stored the data as one data and not 7 data.
+Also the string data has one implicit property when it is stored as a string in an array. That is, the excape sequence (null character) '\0' is stored as "end of string" character always.
+
+char placeName2[] = {'A', 'y', 'o', 'd', 'h' 'y', 'a'};
+Here the '\0' will not be stored at the end.
+
+Thus, the sizeof placeName1 is 8 characters in memory.
+And, the sizeof placeName2 is 7 character in memory.
+
+Way to initialize a string:
+char userString1[32] = ""; // empty string
+char userString2[32] = { '\0' }; // empty string
+char userString3[] = "Ayodhya"; 
+char userString4[] = {'A', 'y', 'o', 'd', 'h' 'y', 'a', '\0'};
+
+STRING HANDLING FUNCTIONS:
+
+strlen()
+It is used to find length of a string
+Prototype:
+int strlen(const char*);
+size_t strlen(const char*);
+
+strcpy()
+It is used to copy a string into another
+Prototype:
+char* strcpy(char*, const char*);
+Usage: strcpy(destination, source);
+strcpy() returns the address of the destination string
+
+strcat()
+It is used to append/concatinate a string to other
+Prototype:
+char* strcat(char*, const char*);
+Usage: strcat(destination, source);
+strcat() returns the address of the destination string
+Note that, the source string is copied from end of the destination.
+Hence to concatinate the string, we must 1st find length of the destination string.
+
+strrev()
+It is used to reverse a string
+char* strrev(char*)
+It returns address of the o/p string which happens to be the i/p array itself
+
+strchr()
+It finds address of 1st occurance of the character in the string
+char* strchr(const char*, char)
+It returns the address of the 1st occurance of the given character in the string. If not found, it return NULL
+
+strrchr()
+It finds address of last occurance of the character in the string
+char* strrchr(const char*, char)
+It returns the address of the last occurance of the given character in the string. If not found, it return NULL
+To do this, the function starts the search from the end.
+Hence strrchr() 1st uses strlen()
+
+strcmp()
+It (case sensitive) compares two strings and returns an int value
+0 means the strings are same
+-1 means the 1st string is smaller than the 2nd
+1 meams the 2nd string is smaller than the 1st
+Note that, smaller we mean, where the difference of ASCII characters of the unmatching characters of the string
+Prototype:
+int strcmp(const char*, const char*)
+
+stricmp()
+It (case in-sensitive) compares two strings and returns an int value
+0 means the strings are same
+-1 means the 1st string is smaller than the 2nd
+1 meams the 2nd string is smaller than the 1st
+Note that, smaller we mean, where the difference of ASCII characters of the unmatching characters of the string
+Prototype:
+int stricmp(const char*, const char*)
+
+strncmp()
+It (case sensitive) compares two strings for 1st n characters only and returns an int value
+0 means the strings are same
+-1 means the 1st string is smaller than the 2nd
+1 meams the 2nd string is smaller than the 1st
+Note that, smaller we mean, where the difference of ASCII characters of the unmatching characters of the string
+Prototype:
+int strncmp(const char*, const char*, int)
+
+strstr()
+To check if a sub string is present in the given string
+It returns the address where the sub string is found, else NULL
+Prototype:
+char* strstr(const char* mainString, char* subString);
+
+strtok()
+
+
+--------------------------------------------------
+Programs on strings
+2D array example on strings
+function pointer
+structure (definition, array of structures, nested, padding, bit fields, pointer to a structure, function pointer inside a structure, SRS)
+Bit manupalation
+DMA (malloc, calloc)
+Dynamic Array
+Styack and Queue implementation
+Linked Lists
+
+
