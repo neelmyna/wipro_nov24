@@ -256,3 +256,17 @@ Prototype:
 char* strstr(const char* mainString, char* subString);
 
 strtok()
+
+
+--------------------------------------------------
+Programs on strings
+2D array example on strings
+function pointer
+structure (definition, array of structures, nested, padding, bit fields, pointer to a structure, function pointer inside a structure, SRS)
+Bit manupalation
+DMA (malloc, calloc)
+Dynamic Array
+Styack and Queue implementation
+Linked Lists
+
+
