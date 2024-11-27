@@ -94,3 +94,15 @@ n is size of the Array.
 * Time taken to access any element in an Array is same.
 i.e. O(1) (one unit of time). Hence an Array is Time Efficient DS
 
+
+PROBLEMS ON RECURSIVE FUNCTIONS:
+1. Find factorial of a number using recursion. (Bad Idea)
+2. Find sum of digits of a number
+3. Find smallest number in an array of size N
+4. Print the Fibo series of N terms (1st 2 terms are 1 and 2)
+---------------------------------------------------
+PROBLEMS ON 2D ARRAYS:
+Find sum of 2 matrices
+Find the transpose of a matrix
+Find product of 2 matrices
+find sum of the total score of all players
