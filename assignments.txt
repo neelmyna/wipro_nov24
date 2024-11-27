@@ -189,5 +189,70 @@ Prototype:
 int strlen(const char*);
 size_t strlen(const char*);
 
+strcpy()
+It is used to copy a string into another
+Prototype:
+char* strcpy(char*, const char*);
+Usage: strcpy(destination, source);
+strcpy() returns the address of the destination string
 
+strcat()
+It is used to append/concatinate a string to other
+Prototype:
+char* strcat(char*, const char*);
+Usage: strcat(destination, source);
+strcat() returns the address of the destination string
+Note that, the source string is copied from end of the destination.
+Hence to concatinate the string, we must 1st find length of the destination string.
 
+strrev()
+It is used to reverse a string
+char* strrev(char*)
+It returns address of the o/p string which happens to be the i/p array itself
+
+strchr()
+It finds address of 1st occurance of the character in the string
+char* strchr(const char*, char)
+It returns the address of the 1st occurance of the given character in the string. If not found, it return NULL
+
+strrchr()
+It finds address of last occurance of the character in the string
+char* strrchr(const char*, char)
+It returns the address of the last occurance of the given character in the string. If not found, it return NULL
+To do this, the function starts the search from the end.
+Hence strrchr() 1st uses strlen()
+
+strcmp()
+It (case sensitive) compares two strings and returns an int value
+0 means the strings are same
+-1 means the 1st string is smaller than the 2nd
+1 meams the 2nd string is smaller than the 1st
+Note that, smaller we mean, where the difference of ASCII characters of the unmatching characters of the string
+Prototype:
+int strcmp(const char*, const char*)
+
+stricmp()
+It (case in-sensitive) compares two strings and returns an int value
+0 means the strings are same
+-1 means the 1st string is smaller than the 2nd
+1 meams the 2nd string is smaller than the 1st
+Note that, smaller we mean, where the difference of ASCII characters of the unmatching characters of the string
+Prototype:
+int stricmp(const char*, const char*)
+
+strncmp()
+It (case sensitive) compares two strings for 1st n characters only and returns an int value
+0 means the strings are same
+-1 means the 1st string is smaller than the 2nd
+1 meams the 2nd string is smaller than the 1st
+Note that, smaller we mean, where the difference of ASCII characters of the unmatching characters of the string
+Prototype:
+int strncmp(const char*, const char*, int)
+
+strstr()
+To check if a sub string is present in the given string
+It returns the address where the sub string is found, else NULL
+Prototype:
+char* strstr(const char* mainString, char* subString);
+
+strtok()
