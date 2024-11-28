@@ -285,3 +285,56 @@ capitals[10][32];
 
 Now seperate the states and capitals and store them in the given 2 arrays and print them with proper formatting.
 
+
+"goa panjim"
+Find the address of space (ADDRESS)
+Now find number of characters in the state (COUNT)
+now copy the state part of the string from args[i] to states[i]
+now copy the capital part of the string to capitals[i]
+
+addressOfSpace = strchr(args[i], ' ');
+now take int variable = address of space - address of 1st element
+count = addressOfSpace - args[i];
+strncpy(states[i], args[i], count);
+---------------------------------------------
+FUNCTION POINTER
+
+As we have pointer that points to a variable (or another pointer which is also a variable), we can also have pointer pointing to a function.
+
+A pointer of type float* can point to any variable in the function/program of type float.
+
+Thus, we know that variables ahev data type.
+
+And functions have prototypes.
+Thus a pointer of a specific prototype can point to any function with that particular prototype.
+----------------------------------------------------
+DYNAMIC MEMORY ALLOCATION
+
+All the variables we have declared so far in all our programs, will be created as soon as the control goes to the declartive statement.
+
+example: int num1, num2, num3;
+Here these 3 variables will be created when control goes there during runtime and nobody can stop it nor we can modify the size or data type or number of variables.
+
+Example2:
+flost studentAverageScores[50];
+
+Here the programmer has defined this statement.
+Hence the programmer is assumming that there might be 50 students whose average scores need to be stored.
+
+However, it is the users/customers/client who knows the number of students.
+
+Now, if the user stores only 10 scores then 40 variables/elements of the array are wasted.
+In another case when the user wants to store 80 scores, then there will be shortage of 30 variables.
+
+So it is good if the user can decide the size of the array.
+However, the user comes into picture during runtime only.
+And during runtime, it is impossible to change/modify the program code.
+Hence we need a new way to decide the amount of memory to be allocated during runtime.
+And this mechanism is called as DYNAMIC (RUNTIME) MEMORY ALLOCATION.
+
+We know C is a procedural language and hence to achieve this, we have 3 functions available from stdlib.h
+
+malloc()
+calloc()
+realloc()
+free()
