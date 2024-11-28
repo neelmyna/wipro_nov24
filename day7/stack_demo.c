@@ -13,7 +13,7 @@ int main()
     // create an array in HEap of user given size
     do
     {
-        puts("1:Push 2:Pop 3:Top 4:DisplayStack 5:Exit. Your choice: ");
+        printf("\n1:Push 2:Pop 3:Top 4:DisplayStack 5:Exit. Your choice: ");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -24,19 +24,20 @@ int main()
             sp = pop(stk, sp);
             break;
         case 3:
-            top(stk);
+            top(stk, sp);
             break;
         case 4:
-            displayStack(stk);
+            displayStack(stk, sp);
             break;
         case 5:
-            puts("End of Program");
+            choice = 0;
+            break;
         default:
             puts("Invalid Input entered");
         }
-
     } while (choice != 0);
     free(stk); // deallocate memory
+    stk = NULL;
     // Note that stk pointer is now a Dangling Pointer
     puts("End of Program");
 }
