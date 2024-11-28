@@ -269,4 +269,19 @@ Dynamic Array
 Styack and Queue implementation
 Linked Lists
 
+3D String Example:
+1. Store first name and last name of the last 5 presidents of Bhaarat
+
+2D String Example:
+Accept the strings from command line as given:
+"karnataka bengaluru" "odhisa bhubaneswar" "sikkim gangtok" "tripura agartala" "goa panjim"
+
+You can take any number of strings as you wish.
+Each string is made up of state-capital pair which is seperated by space
+
+Now, create 2 2D char arrays
+states[10][32];
+capitals[10][32];
+
+Now seperate the states and capitals and store them in the given 2 arrays and print them with proper formatting.
 
