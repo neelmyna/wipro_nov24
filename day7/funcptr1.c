@@ -22,9 +22,9 @@ double findSquare(double num)
 int main()
 {
     double (*fptr)(double, double);
-    fptr = &findSum; // fprt = findSum
-    double sum = fptr(25, 35.05);
+    fptr = &findSum;              // fprt = findSum
+    double sum = fptr(25, 35.05); // function call the pointer
     printf("Sum = %lf \n", sum);
-    fptr = findProduct;
+    fptr = findProduct; // assignment of address of function to function pointer
     printf("Product = %.2lf", fptr(2.5, 4.5));
 }
