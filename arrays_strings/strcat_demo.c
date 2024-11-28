@@ -11,10 +11,13 @@ int main()
 {
     char string1[32] = "";
     char string2[32] = "";
+
     printf("Enter string1: ");
     scanf("%s", string1); // &string1[0]
     printf("Enter string2: ");
     scanf("%s", string2); // &string[0]
+    
     strCat(string1, string2);
+    
     printf("Concatinated string is %s", string1);
 }
