@@ -338,3 +338,23 @@ malloc()
 calloc()
 realloc()
 free()
+
+malloc():
+It takes the number of bytes as argument and it allocates memory in Heap. And it returns the address of 1st byte.
+***Note: malloc() returns an address. This means in the code, there must a pointer to receive this address.
+The pointer is a variable.
+And all variables have their DT
+
+malloc() is used to allocate memory to store data of any DT including user defined DTs
+Hence the address which malloc returns is a GENERIC ADDRESS.
+A generic address is one whose DT is not yet assertained.
+Thus the prototype of malloc is:
+
+void* malloc(int);
+More correctly it is,
+void* malloc(size_t);
+
+*** Note that the memory allocated in Heap area, does not carry a name. It must be accessed only via its address.
+
+*** Note that, the memory allocated in the Heap, must be deallocated using free(). The memory deallocation from Heap is not Storage class dependent.
+
