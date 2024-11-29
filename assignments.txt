@@ -511,16 +511,44 @@ Here we can store details of 100 different accounts. But we know that an Array i
 And here, every account(struture) itself is a heavy object. Thus creating array of heavy objects is a bad idea.
 Hence we must either create the array of structures in Heap or we must use Linked lists to avoid memory inefficiency.
 
-Pointer to a structure:
+Pointer to a structure: struct3.c
 
-structure inside a structure
+bit fields:
+When ever we want to allocate memory in terms of bits
+Example: Suppose a university has declared the rules for admission in its colleges as follow:
+minimum age: 18
+maxinum age: 75
 
+Lets implement this: struct4.c (day8)
+
+structure within a structure
 pointer inside a structure
 function pointer as structure field
 SRS
+
+typedef struct Employee {
+     int id;
+     char name[32];
+     float salary;
+     struct Employee* emp;
+}Employee;
+
+
+Employee
+memebr_No	member_name		member_DT		member_size
+1			id				int				4
+2			name			char*			32
+3			salary			float			4
+4			emp				Employee*		4	
+
+int main() {
+	Employee employee = {101, "nithin", 199000.0f, NULL};
+	printf("Size of Employee = %d", sizeof(employee);
+}
+
+
 Linked Lists
 Binary Search
-
 -------------------
 Bit manupalation
 File I/O
