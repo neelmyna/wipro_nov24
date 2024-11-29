@@ -263,11 +263,9 @@ Programs on strings
 2D array example on strings
 function pointer
 structure (definition, array of structures, nested, padding, bit fields, pointer to a structure, function pointer inside a structure, SRS)
-Bit manupalation
 DMA (malloc, calloc)
 Dynamic Array
-Styack and Queue implementation
-Linked Lists
+Stack and Queue implementation
 
 3D String Example:
 1. Store first name and last name of the last 5 presidents of Bhaarat
@@ -357,4 +355,47 @@ void* malloc(size_t);
 *** Note that the memory allocated in Heap area, does not carry a name. It must be accessed only via its address.
 
 *** Note that, the memory allocated in the Heap, must be deallocated using free(). The memory deallocation from Heap is not Storage class dependent.
+
+Implement Linear Search using Dynamic Array.
+Also discuss the efficiency of Sequential Search.
+
+Read N, the size of Array
+Create the array in Heap
+Read the N numbers of the Array
+Read the number to be searched in the Array
+Call the function linearSearch() to implement the logic
+Print the result according to the return value of the function.
+
+
+HOW TO USE malloc():
+
+Say suppose we want to store 5 float numbers. We know float is 4 bytes
+
+malloc(20)
+This allocates 20 bytes and now we can store 5 float values.
+
+However, what is some day in future, the size of float changes to 8 bytes?
+Then this code malloc(20) will fail. Because then we would need 40 bytes to store 5 float values.
+
+So, we change the code like this:
+malloc(sizeof(float) * 5);
+
+Now, this code works fine, doesn't matter what ever the size of float would be.
+However, this will always allocate memory for only and exactly 5 float values.
+Also note that, it is the programmer who is deciding how many float values to be stored.
+
+What if we need to store 10 float values in one execution and 5 in another and 20 float values in 3rd execution and so on ??
+
+Hence Read N from user and user can decide how many values he/she wish to store.
+And then call: malloc(sizeof(float) * N)
+------------------------------------------------------------
+Stack Implementation using Dynamic Array:
+
+1, 3, 4 5, 
+
+-----------------------------------------------------------
+Linked Lists
+Bit manupalation
+Algorithms and their efficiencies
+File I/O
 
