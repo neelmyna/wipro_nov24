@@ -449,3 +449,59 @@ Note that, there is no memory allocation for the above definition.
 *** The definition is the information being passed by the programmer to the compiler.
 The compiler makes Book Keeping about the structure (Stores information about the structure)
 Thus structure definition is nothing but Meta Data of the structure.
+
+Account
+memebr_No	member_name		member_DT		member_size
+1			acc_num			unsigned int	4
+2			acc_holder_name	char*			32
+3			balance			float			4
+4			type			char*			16
+5			phone_num		u long long int	8
+
+Since in the structure definition there is no memory allocation, we cannot assign/initialize values to the memebers/fields/attributes/elements of the structure
+
+If the structure is defined inside a function then it is known only by that function.
+Hence we usually define a structure globally (outside the functions)
+
+struct Account {
+	unsigned int acc_num
+	char acc_holder_name[32];
+	float balance;
+	char type[16];
+	unsigned long long int phone_num;
+};
+struct Account acc1;
+
+Here memory is allocated to the structure variable acc1 which is 64 bytes.
+----------------
+struct Account {
+	unsigned int acc_num
+	char acc_holder_name[33];
+	float balance;
+	char type[16];
+	unsigned long long int phone_num;
+}acc2;
+
+Note that, we can create the structure object/variable as soon as it is defined as shown above.
+Now, the size of acc2 is not 65 bytes but rather 72 bytes. The extra 7 bytes we get is called as STRUCTURE PADDING
+
+To create a structure object we must use the declaration as below:
+struct Account acc1;
+
+Here the struct keyword is necessary. However, in C++ structures, the use of struct keyword while creating an object is optional.
+
+To avoid using struct keyword while creating the objects, we must use typedef:
+
+typedef struct Account {
+	unsigned int acc_num
+	char acc_holder_name[33];
+	float balance;
+	char type[16];
+	unsigned long long int phone_num;
+}Account;
+// The name "Account" in Line #501 is the Alias name we are creating for struct Account
+
+Thus, now, we can create structure objects using any of the 2 below declarative statements:
+
+struct Account acc1;
+Account acc1;
