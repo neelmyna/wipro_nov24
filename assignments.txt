@@ -399,9 +399,6 @@ unions
 pre processors
 Linked Lists
 Algorithms and their efficiencies
--------------------
-Bit manupalation
-File I/O
 ---------------------------------------------------------------------
 DAY8 Friday 29-11-2024
 
@@ -505,3 +502,27 @@ Thus, now, we can create structure objects using any of the 2 below declarative 
 
 struct Account acc1;
 Account acc1;
+
+Array of structures:
+Suppose I want to create many accounts at a time, say 100.
+
+Account accounts[100];
+Here we can store details of 100 different accounts. But we know that an Array is not a memory efficient DS.
+And here, every account(struture) itself is a heavy object. Thus creating array of heavy objects is a bad idea.
+Hence we must either create the array of structures in Heap or we must use Linked lists to avoid memory inefficiency.
+
+Pointer to a structure:
+
+structure inside a structure
+
+pointer inside a structure
+function pointer as structure field
+SRS
+Linked Lists
+Binary Search
+
+-------------------
+Bit manupalation
+File I/O
+enum
+union

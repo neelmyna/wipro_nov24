@@ -23,14 +23,14 @@ void printAccount1(Account account)
     printf("%-15s : %10llu", "Phone Number", account.phone_num);
 }
 
-void printAccount2(Account *account)
+void printAccount2(Account *ptr)
 {
     puts("Account1 details are:");
-    printf("%-15s : %-10u \n", "Account-Num", account.acc_num);
-    printf("%-15s : %-10s \n", "Acc Holder Name", account.acc_holder_name);
-    printf("%-15s : %-10.2f \n", "Acc Balance", account.balance);
-    printf("%-15s : %-10s \n", "Account Type", account.type);
-    printf("%-15s : %10llu", "Phone Number", account.phone_num);
+    printf("%-15s : %-10u \n", "Account-Num", (*ptr).acc_num);
+    printf("%-15s : %-10s \n", "Acc Holder Name", ptr->acc_holder_name);
+    printf("%-15s : %-10.2f \n", "Acc Balance", (*ptr).balance);
+    printf("%-15s : %-10s \n", "Account Type", ptr->type);
+    printf("%-15s : %10llu", "Phone Number", ptr->phone_num);
 }
 
 int main()
@@ -47,6 +47,8 @@ int main()
     acc3.balance = acc1.balance;
     strcpy(acc3.type, acc1.type);
     acc3.phone_num = acc1.phone_num;
-    printAccount1(acc1);
+
+    printAccount1(acc3);
+    puts("\n----------------------------------------");
     printAccount2(&acc2);
 }
