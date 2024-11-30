@@ -1651,14 +1651,12 @@ PROBLEMS ON RECURSIVE FUNCTIONS:
 2. Find sum of digits of a number
 3. Find smallest number in an array of size N
 4. Print the Fibo series of N terms (1st 2 terms are 1 and 2)
-
 ---------------------------------------------------
 Find sum of 2 matrices
 Find the transpose of a matrix
 Find product of 2 matrices
 find sum of the total score of all players
-
-
+-------------
 When we pass an array to a function:
 main() {
 	int arr[] = {1, 2, 5, 8, 10};
@@ -1680,7 +1678,6 @@ my_function(int* ptr[]) { }  // ptr is a pointer to an array of int pointers
 my_function(int* ptr[5]) { }// ptr is a pointer to an array of size 5, each of which are int pointers
 my_function(int* ptr[2][11]) { }// ptr is a pointer to a 2D array of 2 rows and 11 columns
 
-
 ----------------------------
 JERSY-NUMBER	RUNCS-SCORED
 ----------------------------
@@ -1689,3 +1686,78 @@ JERSY-NUMBER	RUNCS-SCORED
   7				08
  32				28
 777				87
+------------------------------------------
+Git Lab:
+
+1.Change password
+2. Login 
+3. Create Project
+4. Blank Project
+5. Project name, visibility: Public, initialize with readme
+6. Click create project
+
+7. Click Upload Files and add your C programs (.c files) and etc.
+------------------------------------------------------------------
+Linked List:
+
+When we have to store data in memory (say student data, where each student data is a structure)
+
+Here, if we create a static array (size given by programmer in the code, example Student students[100]) then there will huge amount of wastage or shortage.
+To over come this, we take the size of the array from user and create dynamic array (The wastage or shortage is reduced but not completely removed.)
+
+Hence we use Linked Lists where we create memory only what is required.
+
+The only draw back w.r.t. memory is that we need extra space to store the address(link) of the next node (and may be address of previous node in case of Doubly linked list)
+
+The dis advantage of linked list is that, the Nodes/elements cannot be randomly accessed. We have to move from the 1st node to the 2nd and so on (in case of singly linked list).
+In addition to this, we can also move from last node to its previous node and so on in case of double linked list.
+
+The Look-up (accsssing a node) in a linked list is O(n) algorithm.
+
+The nodes in a linked list are placed randomly in memory and not in consecutive addresses. Hence we cannot apply Pointer arithmetic as we do with Arrays.
+---------------------------------------------------------------
+Operations we can perform on a Linked List:
+
+1. Add a new Node
+	1. At front
+	2. At rear
+	3. At a specific position
+2. Delete Node
+	1. From front
+	2. From rear
+	3. From a specific position
+3. Search for a node with specific data
+4. Display the Linked List
+-----------------------------------------------
+IMPLEMENTATION of Stack using LL:
+
+1. We can insert the node at front
+2. Delete the node from front
+
+This is the best way to implement LL. Because both the operations have O(1) efficiency (No need to traverse the LL).
+
+IMPLEMENTATION of Stack using LL:
+1. Add node at rear
+2. Delete node from Rear
+
+IMPLEMENTATION of Queue using LL:
+1. Add node at rear
+2. Delete node from Front
+
+IMPLEMENTATION of Queue using LL:
+1. Add node at Front
+2. Delete node from Rear
+------------------------------------------------
+Implement program 1 using Doubly LL
+
+1. Add a new Node
+	1. At front
+	2. At rear
+	3. At a specific position
+2. Delete Node
+	1. From front
+	2. From rear
+	3. From a specific position
+3. Search for a node with specific data
+4. Display the Linked List (Front to Rear)
+5. Display the Linked List (Rear to Front)
