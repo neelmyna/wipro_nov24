@@ -4,10 +4,11 @@
 int main()
 {
     Node *head = NULL;
+    char searchData[32] = "";
     int choice = 0, position = 0;
     do
     {
-        puts("1:InsertFRont 2:InsertRear 3:InsertAtPosition 4:DeleteFront 5:DeleteRear 6:DeleteFromPosition 7:Search 8:Display 9:Exit.   Your choice? ");
+        puts("\n1:InsertFRont 2:InsertRear 3:InsertAtPosition 4:DeleteFront 5:DeleteRear 6:DeleteFromPosition 7:Search 8:Display 9:Exit.   Your choice? ");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -20,7 +21,7 @@ int main()
         case 3:
             printf("Enter positon to insert node: ");
             scanf("%d", &position);
-            head = insertAtPostion(head, position);
+            head = addAtPosition(head, position);
             break;
         case 4:
             head = deleteFromFront(head);
@@ -34,13 +35,15 @@ int main()
             head = deleteFromPosition(head, position);
             break;
         case 7:
-            head = insertAtFront(head);
+            printf("Enter data to search the node: ");
+            scanf("%s", searchData);
+            searchNode(head, searchData);
             break;
         case 8:
-            head = insertAtFront(head);
+            displayList(head);
             break;
         case 9:
-            head = insertAtFront(head);
+            choice = 0;
             break;
         default:
             puts("Invalid choice");

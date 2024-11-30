@@ -31,6 +31,7 @@ Node *addAtRear(Node *first)
     while (temp->link != NULL) // until last node is not found
         temp = temp->link;     // traverse to next node
     temp->link = newNode;      // attach the new node as last node
+    return first;
 }
 
 Node *deleteFromFront(Node *head)
@@ -79,12 +80,12 @@ Node *addAtPosition(Node *head, int position)
     {
         if (position == 1)
         {
-            return newNode;
+            return newNode; // insert new node at position 1
         }
         puts("Invalid position");
         return NULL;
     }
-    if (position == 1)
+    if (position == 1) // insert new node at position 1 when list is not empty
     {
         newNode->link = head; // make the new node point to 1st node in the list
         head = newNode;
@@ -98,21 +99,62 @@ Node *addAtPosition(Node *head, int position)
         temp1 = temp1->link;
         count++;
     }
-    if (temp1->link == NULL) // we have reached the last node
+    if (count < position - 1)
     {
-        if (count == position - 1) // check if we have to insert new node as last node
-            temp1->link = newNode;
-        else
-            puts("Invalid position");
+        puts("Invalid position");
         return head;
     }
-    newNode->link = temp1;
-    temp2->link = newNode;
+    if (temp1->link == NULL && count == position - 1) // new node to be inserted as last node
+    {
+        temp1->link = newNode;
+    }
+    else
+    {
+        newNode->link = temp1;
+        temp2->link = newNode;
+    }
     return head;
 }
 
 Node *deleteFromPosition(Node *head, int position)
 {
+    if (head == NULL)
+    {
+        puts("List is empty");
+        return NULL;
+    }
+    if (position == 1)
+    {
+        Node *temp = head;
+        head = head->link;
+        printf("Deleted node is %s \n", temp->data);
+        free(temp);
+        return head;
+    }
+    int count = 1;
+    Node *temp1 = head, *temp2 = NULL;
+    while (count < position && temp1->link != NULL)
+    {
+        temp2 = temp1;
+        temp1 = temp1->link;
+        count++;
+    }
+    if (temp1->link == NULL)
+    {
+        if (count == position) // last node should be deleted
+        {
+            printf("Deleted node is %s \n", temp1->data);
+            free(temp1);        // delete the last node
+            temp2->link = NULL; // last but node becomes last node
+        }
+        else if (count < position)
+            puts("Invalid position");
+        return head;
+    }
+    printf("Deleted node is %s \n", temp1->data);
+    temp2->link = temp1->link;
+    free(temp1);
+    return head;
 }
 
 void displayList(const Node *head)
@@ -153,11 +195,15 @@ void deleteAllNodes(Node *head)
 {
     if (head == NULL)
         return;
+    printf("Deleted Nodes are: ");
     Node *temp = head;
     while (temp != NULL)
     {
         if (head != NULL)
+        {
+            printf("%-15s", head->data);
             head = head->link;
+        }
         free(temp);
         temp = head;
     }
