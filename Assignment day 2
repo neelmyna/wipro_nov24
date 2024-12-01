@@ -1,0 +1,13 @@
+//check if a character is a digit
+
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+  char ch;
+  cout << "Enter a Character\n";
+  cin >> ch;
+  isdigit (ch) ? cout << "Entered character is a Digit."  :cout << "Entered character is not a Digit.";
+  return 0;
+}
